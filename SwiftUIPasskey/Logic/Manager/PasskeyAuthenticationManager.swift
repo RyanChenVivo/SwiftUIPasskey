@@ -397,6 +397,8 @@ extension PasskeyAuthenticationManager: ASAuthorizationControllerDelegate {
 // MARK: - ASAuthorizationControllerPresentationContextProviding
 extension PasskeyAuthenticationManager: ASAuthorizationControllerPresentationContextProviding {
     nonisolated func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        return windowProvider.getWindow() ?? ASPresentationAnchor()
+        return MainActor.assumeIsolated {
+            windowProvider.getWindow() ?? ASPresentationAnchor()
+        }
     }
 }

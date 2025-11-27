@@ -45,7 +45,9 @@ enum PasskeyError: Error, LocalizedError {
                     return "無法進行互動式認證"
                 case .unknown:
                     return "發生未知的認證錯誤"
-                @unknown default:
+                case .matchedExcludedCredential:
+                    return "憑證已被排除"
+                default:
                     return "認證錯誤: \(error.localizedDescription)"
                 }
             }
