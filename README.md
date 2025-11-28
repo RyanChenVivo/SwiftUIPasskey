@@ -43,48 +43,6 @@
 7. **Mock Services**: 提供模擬實作，無需真實伺服器即可運行
 8. **OSLog**: 整合日誌系統，方便調試
 
-## 專案結構
-
-```
-SwiftUIPasskey/
-├── Logic/
-│   ├── Manager/
-│   │   ├── PasskeyAuthenticationManager.swift
-│   │   └── PasskeyAuthenticationManagerFactory.swift
-│   ├── Models/
-│   │   ├── AuthenticationModels.swift
-│   │   └── PasskeyError.swift
-│   ├── Protocols/
-│   │   ├── DependencyProtocols.swift
-│   │   └── PasskeyAuthenticationProtocol.swift
-│   └── Services/
-│       ├── DefaultWindowProvider.swift
-│       ├── MockChallengeService.swift
-│       ├── MockVerificationService.swift
-│       ├── MockWindowProvider.swift
-│       └── PasskeyLogger.swift
-└── UI/
-    ├── Models/
-    │   ├── AuthenticationFeature.swift
-    │   └── UserInfo.swift
-    ├── ViewModels/
-    │   ├── AutofillPasskeyOnlyViewModel.swift
-    │   ├── AutofillHybridViewModel.swift
-    │   ├── HybridLoginViewModel.swift
-    │   ├── ImmediateCredentialsViewModel.swift
-    │   ├── PasskeyOnlyLoginViewModel.swift
-    │   └── RegistrationViewModel.swift
-    └── Views/
-        ├── AutofillPasskeyOnlyView.swift
-        ├── AutofillHybridView.swift
-        ├── FeatureListView.swift
-        ├── HybridLoginView.swift
-        ├── ImmediateCredentialsView.swift
-        ├── PasskeyOnlyLoginView.swift
-        ├── RegistrationView.swift
-        └── SuccessView.swift
-```
-
 ## 使用方式
 
 ### Factory Pattern 範例
